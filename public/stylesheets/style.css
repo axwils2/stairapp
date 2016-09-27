@@ -1,0 +1,8 @@
+#item {
+	text-align: center;
+}
+
+.rounded {
+	border-radius: 10%;
+	box-shadow: 2px 2px gray;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app='stair'>
+  <head>
+    <title>Stair Measurer</title>
+    <link rel='stylesheet' type='text/css' href='/stylesheets/bootstrap.css' />
+    <link rel='stylesheet' type='text/css' href='/stylesheets/style.css' />
+  </head>
+
+  <body>
+  	<div class='container header-bg'>
+  		<div class='jumbotron'>
+  			<div class='container-fluid'>
+  				<h1>Stair Helper</h1>
+  				<h2>This app is intended to help you work smarter!</h2>
+  				<h3>Click an option below to begin!</h3>
+  			</div>
+  		</div>
+  	</div>
+  	<div class='container' ng-controller="ItemController as item">
+  		<div class="row">
+  			<h2>Step 1 (Choose Type)</h2>
+	  		<div class="col-sm-6" ng-repeat="choice in item.choices" id='item'>
+	  			<img class='rounded' ng-src="{{choice.image}}" />
+	  			<p>{{choice.title}}</p>
+	  		</div>
+
+	  		<h2>Step 2 (Choose Template)</h2>
+
+	  		<h2>Step 3 (Enter General Info)</h2>
+
+	  		<h2>Step 4 (Enter Specs)</h2>
+
+	  		<h2>Step 5 (Review)
+
+  		</div>
+  	</div>
+
+    <script type='text/javascript' src='javascripts/angular.min.js'></script>
+    <script type='text/javascript' src='javascripts/appAngular.js'></script>
+
+  </body>
+</html>
