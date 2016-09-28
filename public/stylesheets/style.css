@@ -2,7 +2,19 @@
 	text-align: center;
 }
 
-.rounded {
+.button {
 	border-radius: 10%;
-	box-shadow: 2px 2px gray;
+	box-shadow: 3px 6px gray;
+	margin-bottom: 4px;
+}
+
+.button:active {
+	box-shadow: 1px 2px #666;
+	transform: translateY(4px);
+}
+
+.blue .active a,
+.blue .active a:hover {
+	background-color: blue;
+	color: white;	
 }

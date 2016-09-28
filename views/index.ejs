@@ -16,27 +16,65 @@
   			</div>
   		</div>
   	</div>
-  	<div class='container' ng-controller="ItemController as item">
-  		<div class="row">
-  			<h2>Step 1 (Choose Type)</h2>
-	  		<div class="col-sm-6" ng-repeat="choice in item.choices" id='item'>
-	  			<img class='rounded' ng-src="{{choice.image}}" />
-	  			<p>{{choice.title}}</p>
-	  		</div>
 
-	  		<h2>Step 2 (Choose Template)</h2>
+    <section ng-controller="PanelController as panel">
+      <ul class="nav nav-pills">
+        <li ng-class="{ active:panel.isSelected(1) }">
+          <a href ng-click='panel.selectTab(1)'>Step 1</a>
+        </li>
+        <li ng-class="{ active:panel.isSelected(2) }">
+          <a href ng-click='panel.selectTab(2)'>Step 2</a>
+        </li>
+        <li ng-class="{ active:panel.isSelected(3) }">
+          <a href ng-click='panel.selectTab(3)'>Step 3</a>
+        </li>
+        <li ng-class="{ active:panel.isSelected(4) }">
+          <a href ng-click='panel.selectTab(4)'>Step 4</a>
+        </li>
+        <li ng-class="{ active:panel.isSelected(5) }">
+          <a href ng-click='panel.selectTab(5)'>Step 5</a>
+        </li>
+        <li ng-class="{ active:panel.isSelected(6) }">
+          <a href ng-click='panel.selectTab(6)'>Step 6</a>
+        </li>
+      </ul>
+      <div ng-controller="ItemController as item">
+        <div class="panel" ng-show="panel.isSelected(1)">
+          <h4>Choose What To Measure:</h4>
+          <div class="col-sm-6" ng-repeat="choice in item.choices" id='item'>
+            <a href="{{choice.link}}">
+              <img class='button' ng-click="panel.selectTab(2)" ng-class="{ active:panel.isSelected(2) }" ng-src="{{choice.image}}" />
+            </a>
+            <p>{{choice.title}}</p>
+          </div>
+        </div>
 
-	  		<h2>Step 3 (Enter General Info)</h2>
+        <div class="panel" ng-show='panel.isSelected(2)'>
+          <div ng-view></div>
+        </div>
+        
+        <div class="panel" ng-show='panel.isSelected(3)'>
+          <p> Working on it 3</p>
+        </div>
 
-	  		<h2>Step 4 (Enter Specs)</h2>
+        <div class="panel" ng-show='panel.isSelected(4)'>
+          <p> Working on it 4</p>
+        </div>
 
-	  		<h2>Step 5 (Review)
+        <div class="panel" ng-show='panel.isSelected(5)'>
+          <p> Working on it 5</p>
+        </div>
 
-  		</div>
-  	</div>
+        <div class="panel" ng-show='panel.isSelected(6)'>
+          <p> Working on it 6</p>
+        </div>
+        
+      </div>
+    </section>
 
     <script type='text/javascript' src='javascripts/angular.min.js'></script>
     <script type='text/javascript' src='javascripts/appAngular.js'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 
   </body>
 </html>
