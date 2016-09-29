@@ -1,7 +1,3 @@
-#item {
-	text-align: center;
-}
-
 .button {
 	border-radius: 10%;
 	box-shadow: 3px 6px gray;
@@ -13,8 +9,16 @@
 	transform: translateY(4px);
 }
 
+.button:hover {
+	cursor:pointer;
+}
+
 .blue .active a,
 .blue .active a:hover {
 	background-color: blue;
 	color: white;	
+}
+
+#item {
+	text-align: center;
 }

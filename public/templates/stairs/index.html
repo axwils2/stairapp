@@ -1,7 +1,37 @@
-<div ng-controller="type">
-	<div class="col-sm-4" ng-repeat="pic in type.pics" id="item">
-		<img class="button" ng-src="{{pic.image}}" />
-		<p>{{ pic.title }}</p>
+<div class='container-fluid'>
+	<div class="row" id="item">
+		<div class='col-md-4'> 
+			<h3>{{type.pics[0].title}}</h3>
+			<img class="button" ng-click="panel.selectTab(3)"  ng-src="{{type.pics[0].image}}" />
+		</div>
+
+		<div class="col-md-4">
+			<h3>{{type.pics[1].title}}</h3>
+			<img class="button" ng-click="panel.selectTab(3)" ng-src="{{type.pics[1].image}}" />
+		</div>
+
+		<div class="col-md-4">
+			<h3>{{type.pics[2].title}}</h3>
+			<img class="button" ng-click="panel.selectTab(3)" ng-src="{{type.pics[2].image}}" />
+		</div>
 	</div>
+	<div class="row" id="item">
+		<div class='col-md-4'> 
+			<h3>{{type.pics[3].title}}</h3>
+			<img class="button" ng-click="panel.selectTab(3)" ng-src="{{type.pics[3].image}}" />
+		</div>
+
+		<div class="col-md-4">
+			<h3>{{type.pics[4].title}}</h3>
+			<img class="button" ng-click="panel.selectTab(3)" ng-src="{{type.pics[4].image}}" />
+		</div>
+
+		<div class="col-md-4">
+			<h3>{{type.pics[5].title}}</h3>
+			<img class="button" ng-click="panel.selectTab(3)" ng-src="{{type.pics[5].image}}" />
+		</div>
+	</div>
+
 </div>
-<h1>Work?</h1>
+
+

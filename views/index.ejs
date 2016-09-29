@@ -39,7 +39,7 @@
         </li>
       </ul>
       <div ng-controller="ItemController as item">
-        <div class="panel" ng-show="panel.isSelected(1)">
+        <div class="panel active" ng-show="panel.isSelected(1)">
           <h4>Choose What To Measure:</h4>
           <div class="col-sm-6" ng-repeat="choice in item.choices" id='item'>
             <a href="{{choice.link}}">
@@ -50,23 +50,25 @@
         </div>
 
         <div class="panel" ng-show='panel.isSelected(2)'>
-          <div ng-view></div>
+        	<h4>Choose Type:</h4>
+          	<div ng-view></div>
+
         </div>
         
         <div class="panel" ng-show='panel.isSelected(3)'>
-          <p> Working on it 3</p>
+        	<h4>Input Side Specs</h4>
         </div>
 
         <div class="panel" ng-show='panel.isSelected(4)'>
-          <p> Working on it 4</p>
+        	<h4>Input Additional Notes</h4>
         </div>
 
         <div class="panel" ng-show='panel.isSelected(5)'>
-          <p> Working on it 5</p>
+        	<h4>Input Builder Info</h4>
         </div>
 
         <div class="panel" ng-show='panel.isSelected(6)'>
-          <p> Working on it 6</p>
+        	<h4>Review and Send</h4>
         </div>
         
       </div>
