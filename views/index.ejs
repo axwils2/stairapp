@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app='stair'>
   <head>
-    <title>Stair Measurer</title>
+    <title>Crown Stair App</title>
     <link rel='stylesheet' type='text/css' href='/stylesheets/bootstrap.css' />
     <link rel='stylesheet' type='text/css' href='/stylesheets/style.css' />
   </head>
@@ -10,34 +10,25 @@
   	<div class='container header-bg'>
   		<div class='jumbotron'>
   			<div class='container-fluid'>
-  				<h1>Stair Helper</h1>
+  				<h1>Crown Stair Helper</h1>
   				<h2>This app is intended to help you work smarter!</h2>
-  				<h3>Click an option below to begin!</h3>
+          <h3>Click options below to create your PDF!</h3>
   			</div>
   		</div>
   	</div>
 
-    <section ng-controller="PanelController as panel">
-      <ul class="nav nav-pills">
-        <li ng-class="{ active:panel.isSelected(1) }">
-          <a href ng-click='panel.selectTab(1)'>Step 1</a>
-        </li>
-        <li ng-class="{ active:panel.isSelected(2) }">
-          <a href ng-click='panel.selectTab(2)'>Step 2</a>
-        </li>
-        <li ng-class="{ active:panel.isSelected(3) }">
-          <a href ng-click='panel.selectTab(3)'>Step 3</a>
-        </li>
-        <li ng-class="{ active:panel.isSelected(4) }">
-          <a href ng-click='panel.selectTab(4)'>Step 4</a>
-        </li>
-        <li ng-class="{ active:panel.isSelected(5) }">
-          <a href ng-click='panel.selectTab(5)'>Step 5</a>
-        </li>
-        <li ng-class="{ active:panel.isSelected(6) }">
-          <a href ng-click='panel.selectTab(6)'>Step 6</a>
-        </li>
-      </ul>
+    <!-- Angular Dynamic Content -->
+    <div ng-view></div>
+
+
+
+
+
+
+
+
+    <!-- <section ng-controller="PanelController as panel">
+      
       <div ng-controller="ItemController as item">
         <div class="panel active" ng-show="panel.isSelected(1)">
           <h4>Choose What To Measure:</h4>
@@ -72,7 +63,7 @@
         </div>
         
       </div>
-    </section>
+    </section> -->
 
     <script type='text/javascript' src='javascripts/angular.min.js'></script>
     <script type='text/javascript' src='javascripts/appAngular.js'></script>

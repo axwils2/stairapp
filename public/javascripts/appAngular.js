@@ -2,36 +2,64 @@
 	var app = angular.module('stair', ['ngRoute']);
 
 	app.config(function($routeProvider) {
-		$routeProvider.when('/stairs', {
+		$routeProvider.when('/', {
+			templateUrl: "/templates/stairrail.html"
+		})
+
+		.when('/stairs', {
 			templateUrl: "/templates/stairs/index.html",
-			controller: "TypeStairController",
-			controllerAs: 'type'
+			controller: "TypeStairController"
 		})
 		
 		.when('/rails', {
-			templateUrl: "/templates/rails/index.html",
-			controller: "TypeStairController",
-			controllerAs: 'type'
+			templateUrl: "/templates/rails/index.html"
+		})
+
+		.when('/stairs/horseshoe', {
+			templateUrl:"/templates/stairs/types/horseshoe.html"
+		})
+
+		.when('/stairs/left', {
+			templateUrl:"/templates/stairs/types/left.html"
+		})
+
+		.when('/stairs/right', {
+			templateUrl:"/templates/stairs/types/right.html"
+		})
+
+		.when('/stairs/straight', {
+			templateUrl:"/templates/stairs/types/straight.html"
+		})
+
+		.when('/stairs/switchback', {
+			templateUrl:"/templates/stairs/types/switchback.html"
+		})
+
+		.when('/stairs/draw', {
+			templateUrl:"/templates/stairs/types/draw.html"
+		})
+
+		.when('/additional_notes', {
+			templateUrl:"/templates/info/notes.html"
+		})
+
+		.when('/builderinfo', {
+			templateUrl:"/templates/info/builderinfo.html"
+		})
+
+		.when('/review', {
+			templateUrl: "/templates/info/review.html"
 		});
 	});
 
-	app.controller('ItemController', function() {
-		this.choices = options;
+	app.controller('ItemController', function($scope) {
+		$scope.choices = options;
 	}); 
 
-	app.controller('TypeStairController', function() {
-		this.pics = s_pics;
+	app.controller('TypeStairController', function($scope) {
+		$scope.pics = s_pics;
 	});
 
-	app.controller('PanelController', function() {
-		this.tab = 1;
-		this.selectTab = function (setTab) {
-			this.tab = setTab;
-		};
-		this.isSelected = function(checkTab) {
-			return this.tab === checkTab;
-		};
-	});
 
 	var options = [
 		{
