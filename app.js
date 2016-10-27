@@ -8,6 +8,21 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
+//Creating a PDF instance
+var PDFDocument = require('pdfkit');
+var fs = require('fs');
+doc = new PDFDocument;
+doc.pipe(fs.createWriteStream('public/images/test.pdf'));
+
+//Creating content of PDF
+doc.fontSize(15);
+doc.text("Generate PDF While typing change?!");
+
+doc.end();
+
+
+
+
 var app = express();
 
 // view engine setup

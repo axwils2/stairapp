@@ -7,8 +7,7 @@
 		})
 
 		.when('/stairs', {
-			templateUrl: "/templates/stairs/index.html",
-			controller: "TypeStairController"
+			templateUrl: "/templates/stairs/index.html"
 		})
 		
 		.when('/rails', {
@@ -52,48 +51,4 @@
 		});
 	});
 
-	app.controller('ItemController', function($scope) {
-		$scope.choices = options;
-	}); 
-
-	app.controller('TypeStairController', function($scope) {
-		$scope.pics = s_pics;
-	});
-
-
-	var options = [
-		{
-			image: "/images/stairs.jpeg", 
-			title: "Measuring Stairs?",
-			link: "#/stairs"
-		},
-		{
-			image: "/images/rails.png",
-			title: "Measuring Rails?",
-			link: "#/rails"
-		}
-	];
-
-	var s_pics = [
-		{
-			image: "/images/switchback.png",
-			title: "Switchback Stair"
-		},
-		{
-			image: "/images/straight.png",
-			title: "Straight Stair"
-		},
-		{
-			image: "/images/left.png",
-			title: "Left Turn Stair"
-		},
-		{
-			image: "/images/right.png",
-			title: "Right Turn Stair"
-		},
-		{
-			image: "/images/horseshoe.png",
-			title: "Horseshoe Stair"
-		}
-	];
 })();

@@ -1,4 +1,4 @@
-/*.button {
+.button {
 	border-radius: 10%;
 	box-shadow: 3px 6px gray;
 	margin-bottom: 4px;
@@ -11,7 +11,7 @@
 
 .button:hover {
 	cursor:pointer;
-}*/
+}
 
 .blue .active a,
 .blue .active a:hover {
@@ -21,4 +21,8 @@
 
 #item {
 	text-align: center;
+}
+
+#resume {
+	width:100%;
 }

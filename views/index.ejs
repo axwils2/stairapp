@@ -20,51 +20,6 @@
     <!-- Angular Dynamic Content -->
     <div ng-view></div>
 
-
-
-
-
-
-
-
-    <!-- <section ng-controller="PanelController as panel">
-      
-      <div ng-controller="ItemController as item">
-        <div class="panel active" ng-show="panel.isSelected(1)">
-          <h4>Choose What To Measure:</h4>
-          <div class="col-sm-6" ng-repeat="choice in item.choices" id='item'>
-            <a href="{{choice.link}}">
-              <img class='button' ng-click="panel.selectTab(2)" ng-class="{ active:panel.isSelected(2) }" ng-src="{{choice.image}}" />
-            </a>
-            <p>{{choice.title}}</p>
-          </div>
-        </div>
-
-        <div class="panel" ng-show='panel.isSelected(2)'>
-        	<h4>Choose Type:</h4>
-          	<div ng-view></div>
-
-        </div>
-        
-        <div class="panel" ng-show='panel.isSelected(3)'>
-        	<h4>Input Side Specs</h4>
-        </div>
-
-        <div class="panel" ng-show='panel.isSelected(4)'>
-        	<h4>Input Additional Notes</h4>
-        </div>
-
-        <div class="panel" ng-show='panel.isSelected(5)'>
-        	<h4>Input Builder Info</h4>
-        </div>
-
-        <div class="panel" ng-show='panel.isSelected(6)'>
-        	<h4>Review and Send</h4>
-        </div>
-        
-      </div>
-    </section> -->
-
     <script type='text/javascript' src='javascripts/angular.min.js'></script>
     <script type='text/javascript' src='javascripts/appAngular.js'></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
