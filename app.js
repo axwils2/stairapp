@@ -8,10 +8,10 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
-//Creating a PDF instance
+// //Creating a PDF instance
 var PDFDocument = require('pdfkit');
 var fs = require('fs');
-doc = new PDFDocument;
+doc = new PDFDocument();
 doc.pipe(fs.createWriteStream('public/images/test.pdf'));
 
 //Creating content of PDF
